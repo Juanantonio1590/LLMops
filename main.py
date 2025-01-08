@@ -6,6 +6,7 @@ url = 'https://www.acquired.fm/episodes/mars-inc-the-chocolate-story'  # replace
 
 # Send HTTP request to fetch the page content
 response = requests.get(url)
+response.encoding = 'utf-8'
 
 # Parse the page content using BeautifulSoup
 soup = BeautifulSoup(response.text, 'html.parser')
